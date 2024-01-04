@@ -12,4 +12,4 @@ urlpatterns = [
 
 ]
 
-# handler404 = 'myapp.views.error_404'
+handler404 = 'myapp.views.error_404'
