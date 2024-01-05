@@ -1,6 +1,7 @@
 from django.shortcuts import render,HttpResponse,redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login
+from django.contrib import messages
 from .models import *
 
 
@@ -22,6 +23,9 @@ def signup(request):
         cpassword=request.POST.get('confirm_password')
         en=Word(text=uname)
         en.save()
+        if User.objects.filter(username=uname).exists():
+            messages.error(request,'Username already exits.Please choose a different username')
+            return redirect('signup')
         if password!=cpassword:
             return redirect('signup')
         else:
