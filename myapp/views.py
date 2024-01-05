@@ -24,11 +24,11 @@ def signup(request):
         en=Word(text=uname)
         en.save()
         if User.objects.filter(username=uname).exists():
-            messages.error(request,'username already exits!!')
+            messages.error(request,'Username already exits!!')
             return redirect('signup')
-        if password!=cpassword:
+        if password!=cpassword: 
             return redirect('signup')
-        else:
+        else:    
             my_user=User.objects.create_user(uname,email,password)
             my_user.save()
         return redirect('signin')
