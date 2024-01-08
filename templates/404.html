@@ -1,1 +1,82 @@
-<h1>Page Not Found Divyanshu<h1>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>404 Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            html, body{
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                font-family: sans-serif;
+                background-color: #E7FFFF;
+              }
+              
+              h1, a{
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+              }
+              
+              .section{
+                padding: 4rem 2rem;
+              }
+              
+              .section .error{
+                font-size: 150px;
+                color: #008B62;
+                text-shadow: 
+                  1px 1px 1px #00593E,    
+                  2px 2px 1px #00593E,
+                  3px 3px 1px #00593E,
+                  4px 4px 1px #00593E,
+                  5px 5px 1px #00593E,
+                  6px 6px 1px #00593E,
+                  7px 7px 1px #00593E,
+                  8px 8px 1px #00593E,
+                  25px 25px 8px rgba(0,0,0, 0.2);
+              }
+              
+              .page{
+                margin: 2rem 0;
+                font-size: 20px;
+                font-weight: 600;
+                color: #444;
+              }
+              
+              .back-home{
+                display: inline-block;
+                border: 2px solid #222;
+                color: #222;
+                text-transform: uppercase;
+                font-weight: 600;
+                padding: 0.75rem 1rem 0.6rem;
+                transition: all 0.2s linear;
+                box-shadow: 0 3px 8px rgba(0,0,0, 0.3);
+              }
+              .back-home:hover{
+                background: #222;
+                color: #ddd;
+              }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="section">
+            <h1 class="error">404</h1>
+            <div class="page">Ooops!!! The page you are looking for is not found</div>
+            <a class="back-home" href="{% url "afterlogin" %}">Back to home</a>
+          </div>
+        <script src="" async defer></script>
+    </body>
+</html>
