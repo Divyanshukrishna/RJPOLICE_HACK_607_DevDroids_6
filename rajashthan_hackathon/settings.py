@@ -87,8 +87,8 @@ TEMPLATES = [
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'APP': {
-            'client_id': '94160621559-gdtrkv1uofu0c8ggid73dgc3rkp0d49c.apps.googleusercontent.com',
-            'secret': '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',
+            'client_id': '930184204389-qllop0f9lobmuph73mhbj6niafr6fiha.apps.googleusercontent.com',
+            'secret': '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',
             'key': ''
         },
     },
