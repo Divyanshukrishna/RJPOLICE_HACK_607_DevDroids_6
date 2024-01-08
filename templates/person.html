@@ -74,11 +74,11 @@
 				{% csrf_token %}
 				<h3 class="text-center">Edit Personal Information</h3>
 				<div class="row">
-					<div class="column">
+					{% comment %} <div class="column">
 						<label for="">Upload Your Image</label><br><br>
 						{{form.as_p}}
-						{% comment %} <input type="file" id="myFile" name="filename"> {% endcomment %}
-					</div><br>
+						<input type="file" id="myFile" name="filename">
+					</div><br>  {% endcomment %}
 					<div class="column">
 						<label class="profile_details_text" for="first_name">Name:</label>
 						<input type="text" name="first_name" id="first_name" class="form-control" value="" required>
@@ -90,6 +90,17 @@
 						<input type="email" name="email" id="email" class="form-control" value="" required>
 					</div>
 				</div>
+
+				<div class="column">
+					<label class="profile_details_text" for="first_name">Location</label>
+					<input type="text" name="first_name" id="first_name" class="form-control" value="" required>
+				</div>
+
+				<div class="column">
+					<label class="profile_details_text" for="first_name">Range</label>
+					<input type="text" name="first_name" id="first_name" class="form-control" value="" required>
+				</div>
+
 				<div class="row">
 					<div class="column">
 						<label class="profile_details_text" for="phone">Mobile Number:</label>
