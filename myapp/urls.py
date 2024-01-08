@@ -8,6 +8,7 @@ urlpatterns = [
     path('signin/',views.signin, name="signin"),
     path('afterlogin/',views.afterlogin, name="afterlogin"),
     path('dataset/',views.dataset, name="dataset"),
+    path('person/',views.person, name="person")
 
 
 ]

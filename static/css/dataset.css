@@ -72,9 +72,10 @@ section {
     border-left: 5px solid rgb(237, 65, 65);
     border-bottom: 4px solid rgb(237, 65, 65);
     border-radius: 10px;
-    height: 320px;
+    height: 350px;
     text-align: center;
     backdrop-filter: blur(10px);
+    /* z-index: -100; */
 }
 
 .camera-section {
@@ -141,6 +142,7 @@ section {
     color: tomato;
     cursor: pointer;
 }
+  
 
 @media (min-width: 769px) and (max-width: 1028px) {}
 
@@ -169,7 +171,7 @@ section {
 
 @media (max-width: 321px) {
     .data-card {
-        height: 350px;
+        height: 390px;
     }
 
     .activities button {
@@ -178,7 +180,6 @@ section {
     }
 
     .back-btn {
-        margin-right: 10px;
+        margin-right: 10px;
     }
 }
-

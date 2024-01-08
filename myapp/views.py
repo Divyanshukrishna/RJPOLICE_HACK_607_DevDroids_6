@@ -54,3 +54,6 @@ def error_404(request,exception):
 def afterlogin(request):
     us=Word.objects.last()
     return render(request,"afterlogin.html",{'us':us})
+
+def person(request):
+    return render(request,"person.html")
