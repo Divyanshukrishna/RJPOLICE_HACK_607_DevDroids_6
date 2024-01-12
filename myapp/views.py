@@ -108,4 +108,18 @@ def afterlogin(request):
     return render(request,"afterlogin.html",{'us':us})
 
 def cameraperson(request):
+    if request.method == 'POST':
+        text=request.POST.get('name')
+        email=request.POST.get('email')
+        cameracompany=request.POST.get('cameracompany')
+        latitude=request.POST.get('latitude')
+        longitude=request.POST.get('longitude')        
+        range=request.POST.get('range')
+        location=request.POST.get('location')
+        pincode=request.POST.get('pincode')
+        mobile=request.POST.get('mobile')
+        ece=UserDataCompany(text=text,email=email,cameracompany=cameracompany,phone=mobile,latitude=latitude,longitude=longitude,range=range,location=location,pincode=pincode)
+        ece.save()
+        return redirect('signin')
+        
     return render(request,"cameraperson.html")

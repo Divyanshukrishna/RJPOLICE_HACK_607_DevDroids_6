@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {% comment %} <link rel="stylesheet" href="{% static 'css/create_follow.css' %}"> {% endcomment %}
     <title>Document</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Mulish&family=Poppins&display=swap');
@@ -78,44 +77,52 @@
                 <div class="row">
                     <div class="column">
                         <label class="profile_details_text" for="first_name">Name:</label>
-                        <input type="text" name="first_name" id="first_name" class="form-control" value="" required>
+                        <input type="text" name="name" id="first_name" class="form-control" value="" required>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="column">
-                        <label class="profile_details_text" for="phone">IP address:</label>
-                        <input type="number" name="phone" id="phone" class="form-control" value="" required
-                            pattern="[0-9]{10}">
-                    </div>
-                </div>
-
+                
                 <div class="row">
                     <div class="column">
                         <label class="profile_details_text" for="email">Email Address:</label>
                         <input type="email" name="email" id="email" class="form-control" value="" required>
                     </div>
                 </div>
-
+                
                 <div class="column">
                     <label class="profile_details_text" for="first_name">Camera Company</label>
-                    <input type="text" name="first_name" id="first_name" class="form-control" value="" required>
+                    <input type="text" name="cameracompany" id="first_name" class="form-control" value="" required>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <label class="profile_details_text" for="phone">Latitude:</label>
+                        <input type="number" name="latitude" id="phone" class="form-control" value="" required
+                            pattern="[0-9]{10}">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <label class="profile_details_text" for="phone">Longitude:</label>
+                        <input type="number" name="longitude" id="phone" class="form-control" value="" required
+                            pattern="[0-9]{10}">
+                    </div>
                 </div>
 
                 <div class="column">
                     <label class="profile_details_text" for="first_name">Range</label>
-                    <input type="text" name="first_name" id="first_name" class="form-control" value="" required>
+                    <input type="text" name="range"  id="first_name" class="form-control" value="" required>
                 </div>
 
                 <div class="column">
                     <label class="profile_details_text" for="first_name">Location</label>
-                    <input type="text" name="first_name" id="first_name" class="form-control" value="" required>
+                    <input type="text" name="location" id="first_name" class="form-control" value="" required>
                 </div>
 
                 <div class="row">
                     <div class="column">
                         <label class="profile_details_text" for="phone">Pin Code:</label>
-                        <input type="number" name="phone" id="phone" class="form-control" value="" required
+                        <input type="number" name="pincode" id="phone" class="form-control" value="" required
                             pattern="[0-9]{10}">
                     </div>
                 </div>
@@ -123,7 +130,7 @@
                 <div class="row">
                     <div class="column">
                         <label class="profile_details_text" for="phone">Mobile Number:</label>
-                        <input type="tel" name="phone" id="phone" class="form-control" value="" required
+                        <input type="tel" name="mobile" name="mobile" id="phone" class="form-control" value="" required
                             pattern="[0-9]{10}">
                     </div>
                 </div>
@@ -144,7 +151,7 @@
                 </div>
                 <div class="row">
                     <div class="column">
-                        <a href="/">
+                        <a href="">
                             <input type="submit" class="btn btn-success" value="Submit">
                         </a>
                     </div>
