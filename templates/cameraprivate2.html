@@ -47,7 +47,6 @@
     <div class="container">
         <h1>Camera Details <i class="fa-solid fa-arrow-down"></i></h1>
 
-
         <div class="main-card">
             <div class="camera-number">
                 <i class="fa-solid fa-video fa-2xl" style="color: #fffafa;"> <span>1</span></i>
@@ -59,40 +58,42 @@
                         <a href="#" id="popupLink"><i class="fa-solid fa-pen-to-square fa-2xs"></i></a>
                     </div>
                     <div class="name">
-                        vishnu kumar verma
+                        {{ aiml.text }}
                     </div>
                     <div class="ip-add">
-                        <i class="fa-solid fa-tablet-screen-button"></i> 123.4534.342.323.32
+                        <i class="fa-solid fa-tablet-screen-button"></i> 123.453.374.578.785
                     </div>
                     <div class="camera-company">
-                        Hikvision DS-2CD2622FWD-I(Z)(S)
+                        {{ aiml.cameracompany }}
                     </div>
                 </div>
                 <div class="additional-details">
                     <div class="Email">
-                        <p>Email : <span>xyz@gmail.com</span></p>
+                        <p>Email : <span> {{aiml.email}} </span></p>
                     </div>
                     <div class="camera-range">
                         <p>Field of View : <span>20deg - 109deg</span></p>
                     </div>
                     <div class="address">
-                        <p>address : <span>meerut</span></p>
+                        <p>address : <span> {{aiml.location}} </span></p>
                     </div>
                     <div class="pin-code">
-                        <p>Pin-Code : <span>233423</span></p>
+                        <p>Pin-Code : <span> {{aiml.pincode}} </span></p>
                     </div>
                     <div class="mobile">
-                        <p>Contact No. : <span>1234567890</span></p>
+                        <p>Contact No. : <span>{{ aiml.mobile }}</span></p>
                     </div>
                     <div class="gender">
                         <p>Gender : <span>Male</span></p>
                     </div>
                     <div class="nationality">
-                        <p>Nationality : <span>Indian</span></p>
+                        <p>Nationality : <span> Indian </span></p>
                     </div>
                 </div>
             </section>
         </div>
+              
+         
 
         <div class="overlay" id="overlay"></div>
         <div class="popup-container" id="popupContainer">
