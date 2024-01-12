@@ -13,10 +13,10 @@
 
     <form id="locationForm">
         <label for="latitude">Latitude:</label>
-        <input type="text" id="latitude" value="#" placeholder="Enter latitude" />
+        <input type="text" id="latitude" value="{{ cs.latitude }}" placeholder="Enter latitude" />
 
         <label for="longitude">Longitude:</label>
-        <input type="text" id="longitude" value="#" placeholder="Enter longitude" />
+        <input type="text" id="longitude" value="{{ cs.longitude }}" placeholder="Enter longitude" />
 
         <button type="button" onclick="showLocation()">Show Location</button>
     </form>

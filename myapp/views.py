@@ -24,42 +24,51 @@ def datasetpublic(request):
 
 
 def camerapublic1(request):
-    return render(request,"camerapublic1.html")
+    aiml=UserDataCompany.objects.last()
+    return render(request,"camerapublic1.html",{'aiml':aiml})
 
 
 def camerapublic2(request):
-    return render(request,"camerapublic2.html")
+    aiml=UserDataCompany.objects.last()
+    return render(request,"camerapublic2.html",{'aiml':aiml})
 
 
 def camerapublic3(request):
-    return render(request,"camerapublic3.html")
+    aiml=UserDataCompany.objects.last()
+    return render(request,"camerapublic3.html",{'aiml':aiml})
 
 
 def camerapublic4(request):
-    return render(request,"camerapublic4.html")
+    aiml=UserDataCompany.objects.last()
+    return render(request,"camerapublic4.html",{'aiml':aiml})
 
 
 
 
 def cameraprivate1(request):
-    return render(request,"cameraprivate1.html")
+    aiml=UserDataCompany.objects.last()
+    return render(request,"cameraprivate1.html",{'aiml':aiml})
 
 
 def cameraprivate2(request):
-    return render(request,"cameraprivate2.html")
+    aiml=UserDataCompany.objects.last()
+    return render(request,"cameraprivate2.html",{'aiml':aiml})
 
 
 def cameraprivate3(request):
-    return render(request,"cameraprivate3.html")
+    aiml=UserDataCompany.objects.last()
+    return render(request,"cameraprivate3.html",{'aiml':aiml})
 
 
 def cameraprivate4(request):
-    return render(request,"cameraprivate4.html")
+    aiml=UserDataCompany.objects.last()
+    return render(request,"cameraprivate4.html",{'aiml':aiml})
 
 
 
 def geotrack(request):
-    return render(request,"geotrack.html")
+    cs=UserDataCompany.objects.last()
+    return render(request,"geotrack.html",{'cs':cs})
 
 
 
