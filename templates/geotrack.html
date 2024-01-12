@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Map</title>
+    <!-- leaflet js  -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+
+    <div id="map" style="height: 400px;"></div>
+
+    <form id="locationForm">
+        <label for="latitude">Latitude:</label>
+        <input type="text" id="latitude" value="28.717275" placeholder="Enter latitude" />
+
+        <label for="longitude">Longitude:</label>
+        <input type="text" id="longitude" value="28.915374" placeholder="Enter longitude" />
+
+        <button type="button" onclick="showLocation()">Show Location</button>
+    </form>
+
+    <!-- leaflet js  -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Map initialization 
+        var map = L.map('map').setView([14.0860746, 100.608406], 6);
+
+        // OSM layer
+        var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+        osm.addTo(map);
+
+        var marker, circle;
+
+        function showLocation() {
+            var latInput = document.getElementById('latitude').value;
+            var longInput = document.getElementById('longitude').value;
+
+            if (!isNaN(latInput) && !isNaN(longInput)) {
+                var lat = parseFloat(latInput);
+                var long = parseFloat(longInput);
+
+                if (marker) {
+                    map.removeLayer(marker);
+                }
+
+                if (circle) {
+                    map.removeLayer(circle);
+                }
+
+                marker = L.marker([lat, long]);
+                circle = L.circle([lat, long], { radius: 100 }); // Adjust radius as needed
+
+                var featureGroup = L.featureGroup([marker, circle]).addTo(map);
+
+                map.fitBounds(featureGroup.getBounds());
+
+                console.log("Entered coordinates: Lat: " + lat + " Long: " + long);
+            } else {
+                alert("Please enter valid numeric coordinates");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,868 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+        integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="{% static 'css/datasetpublicprivate.css' %}">
+    <title>DataBase/GeoTags</title>
+</head>
+
+<body>
+    <header>
+        <p></p>
+        <h1 id="top">
+            Cyber Vision DataSet (Private)
+        </h1>
+        <a class="back-btn" href="{% url 'chooseoption' %}"><i class="fa-solid fa-xmark fa-2xl" style="color: #ffffff;"></i></a>
+    </header>
+
+    <div class="navigation">
+        <select name="Select" id="dropdown" value="Select">
+            <option value="Ghaziabad">Jaipur</option>
+            <option value="Patna">Jodhpur</option>
+            <option value="Nagpur">Kota</option>
+            <option value="Delhi">Bikaner</option>
+        </select>
+    </div>
+
+
+    <div class="locality" id="Ghaziabad">
+        <h3>
+            Rajasthan :
+        </h3>
+        <h5>
+            Jaipur
+        </h5>
+    </div>
+
+    <section class="geo-card">
+        <div class="first-data data-card">
+
+            <div class="camera-section">
+                <div class="camera-details one-one">
+                    <i class="fa-solid fa-video fa-2xl"></i>
+                    <p>#1</p>
+                    <p>Home</p>
+                </div>
+                <div class="ip-address">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    <p>123.4534.342.323.32</p>
+                </div>
+                <div class="geo-tag">
+                    <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+                    <a href="{% url "geotrack" %}">Go to Geo-Location</a>
+                </div>
+                <div class="activities">
+                    <a href="#">
+                        <button>
+                            Live Recording
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button>
+                            Section Viewer
+                        </button>
+                    </a>
+
+                    <a href="{% url "cameraprivate1" %}" id="">
+                        <button style="margin-top: 10px;" class="popup-btn">
+                            Camera Details
+                        </button>
+                    </a>
+
+                </div>
+
+                <!-- <div class="popup-overlay" style="z-index: 100;">
+                    <div class="popup">
+                      <h2>Popup Content</h2>
+                      <p>This is the content of the popup.</p>
+                      <button class="close-btn">Close</button>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+        <div class="first-data data-card">
+
+            <div class="camera-section">
+                <div class="camera-details">
+                    <i class="fa-solid fa-video fa-2xl"></i>
+                    <p>#2</p>
+                    <p>Home</p>
+                </div>
+                <div class="ip-address">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    <p>123.4534.342.323.32</p>
+                </div>
+                <div class="geo-tag">
+                    <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+                    <a href="#">Go to Geo-Location</a>
+                </div>
+                <div class="activities">
+                    <a href="#">
+                        <button>
+                            Live Recording
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button>
+                            Section Viewer
+                        </button>
+                    </a>
+
+                    <a href="{% url "cameraprivate2" %}" id="">
+                        <button style="margin-top: 10px;" class="popup-btn">
+                            Camera Details
+                        </button>
+                    </a>
+
+                </div>
+
+                <!-- <div class="popup-overlay" style="z-index: 100;">
+                    <div class="popup">
+                      <h2>Popup Content</h2>
+                      <p>This is the content of the popup.</p>
+                      <button class="close-btn">Close</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="first-data data-card">
+
+            <div class="camera-section">
+                <div class="camera-details">
+                    <i class="fa-solid fa-video fa-2xl"></i>
+                    <p>#3</p>
+                    <p>Home</p>
+                </div>
+                <div class="ip-address">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    <p>123.4534.342.323.32</p>
+                </div>
+                <div class="geo-tag">
+                    <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+                    <a href="#">Go to Geo-Location</a>
+                </div>
+                <div class="activities">
+                    <a href="#">
+                        <button>
+                            Live Recording
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button>
+                            Section Viewer
+                        </button>
+                    </a>
+
+                    <a href="{% url 'cameraprivate3' %}" id="">
+                        <button style="margin-top: 10px;" class="popup-btn">
+                            Camera Details
+                        </button>
+                    </a>
+
+                </div>
+
+                <!-- <div class="popup-overlay">
+                    <div class="popup">
+                      <h2>Popup Content</h2>
+                      <p>This is the content of the popup.</p>
+                      <button class="close-btn">Close</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="first-data data-card">
+
+            <div class="camera-section">
+                <div class="camera-details">
+                    <i class="fa-solid fa-video fa-2xl"></i>
+                    <p>#4</p>
+                    <p>Home</p>
+                </div>
+                <div class="ip-address">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    <p>123.4534.342.323.32</p>
+                </div>
+                <div class="geo-tag">
+                    <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+                    <a href="#">Go to Geo-Location</a>
+                </div>
+                <div class="activities">
+                    <a href="#">
+                        <button>
+                            Live Recording
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button>
+                            Section Viewer
+                        </button>
+                    </a>
+
+                    <a href="{% url 'cameraprivate4' %}" id="">
+                        <button style="margin-top: 10px;" class="popup-btn">
+                            Camera Details
+                        </button>
+                    </a>
+
+                </div>
+
+                <!-- <div class="popup-overlay">
+                    <div class="popup">
+                      <h2>Popup Content</h2>
+                      <p>This is the content of the popup.</p>
+                      <button class="close-btn">Close</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+    </section>
+
+    <a href="#top">
+        <h4>jump to top</h4>
+    </a>
+
+    <div class="locality" id="Patna">
+        <h3>
+            Jodhpur
+        </h3>
+    </div>
+
+    <section>
+        <div class="first-data data-card">
+
+            <div class="camera-section">
+                <div class="camera-details">
+                    <i class="fa-solid fa-video fa-2xl"></i>
+                    <p>#1</p>
+                    <p>Home</p>
+                </div>
+                <div class="ip-address">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    <p>123.4534.342.323.32</p>
+                </div>
+                <div class="geo-tag">
+                    <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+                    <a href="#">Go to Geo-Location</a>
+                </div>
+                <div class="activities">
+                    <a href="#">
+                        <button>
+                            Live Recording
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button>
+                            Section Viewer
+                        </button>
+                    </a>
+
+                    <a href="#" id="">
+                        <button style="margin-top: 10px;" class="popup-btn">
+                            Camera Details
+                        </button>
+                    </a>
+
+                </div>
+
+                <!-- <div class="popup-overlay">
+                    <div class="popup">
+                      <h2>Popup Content</h2>
+                      <p>This is the content of the popup.</p>
+                      <button class="close-btn">Close</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="first-data data-card">
+
+            <div class="camera-section">
+                <div class="camera-details">
+                    <i class="fa-solid fa-video fa-2xl"></i>
+                    <p>#2</p>
+                    <p>Home</p>
+                </div>
+                <div class="ip-address">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    <p>123.4534.342.323.32</p>
+                </div>
+                <div class="geo-tag">
+                    <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+                    <a href="#">Go to Geo-Location</a>
+                </div>
+                <div class="activities">
+                    <a href="#">
+                        <button>
+                            Live Recording
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button>
+                            Section Viewer
+                        </button>
+                    </a>
+
+                    <a href="#" id="">
+                        <button style="margin-top: 10px;" class="popup-btn">
+                            Camera Details
+                        </button>
+                    </a>
+
+                </div>
+
+                <!-- <div class="popup-overlay">
+                    <div class="popup">
+                      <h2>Popup Content</h2>
+                      <p>This is the content of the popup.</p>
+                      <button class="close-btn">Close</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="first-data data-card">
+
+            <div class="camera-section">
+                <div class="camera-details two-three">
+                    <i class="fa-solid fa-video fa-2xl"></i>
+                    <p>#3</p>
+                    <p>Home</p>
+                </div>
+                <div class="ip-address">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    <p>123.4534.342.323.32</p>
+                </div>
+                <div class="geo-tag">
+                    <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+                    <a href="#">Go to Geo-Location</a>
+                </div>
+                <div class="activities">
+                    <a href="#">
+                        <button>
+                            Live Recording
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button>
+                            Section Viewer
+                        </button>
+                    </a>
+
+                    <a href="#" id="">
+                        <button style="margin-top: 10px;" class="popup-btn">
+                            Camera Details
+                        </button>
+                    </a>
+
+                </div>
+
+                <!-- <div class="popup-overlay">
+                    <div class="popup">
+                      <h2>Popup Content</h2>
+                      <p>This is the content of the popup.</p>
+                      <button class="close-btn">Close</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="first-data data-card">
+
+            <div class="camera-section">
+                <div class="camera-details">
+                    <i class="fa-solid fa-video fa-2xl"></i>
+                    <p>#4</p>
+                    <p>Home</p>
+                </div>
+                <div class="ip-address">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    <p>123.4534.342.323.32</p>
+                </div>
+                <div class="geo-tag">
+                    <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+                    <a href="#">Go to Geo-Location</a>
+                </div>
+                <div class="activities">
+                    <a href="#">
+                        <button>
+                            Live Recording
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button>
+                            Section Viewer
+                        </button>
+                    </a>
+
+                    <a href="#" id="">
+                        <button style="margin-top: 10px;" class="popup-btn">
+                            Camera Details
+                        </button>
+                    </a>
+
+                </div>
+
+                <!-- <div class="popup-overlay">
+                    <div class="popup">
+                      <h2>Popup Content</h2>
+                      <p>This is the content of the popup.</p>
+                      <button class="close-btn">Close</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+    </section>
+
+    <a href="#top">
+        <h4>jump to top</h4>
+    </a>
+
+    <div class="locality" id="Nagpur">
+        <h3>
+            Kota
+        </h3>
+    </div>
+
+    <section>
+        <div class="first-data data-card">
+
+            <div class="camera-section">
+                <div class="camera-details">
+                    <i class="fa-solid fa-video fa-2xl"></i>
+                    <p>#1</p>
+                    <p>Home</p>
+                </div>
+                <div class="ip-address">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    <p>123.4534.342.323.32</p>
+                </div>
+                <div class="geo-tag">
+                    <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+                    <a href="#">Go to Geo-Location</a>
+                </div>
+                <div class="activities">
+                    <a href="#">
+                        <button>
+                            Live Recording
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button>
+                            Section Viewer
+                        </button>
+                    </a>
+
+                    <a href="#" id="">
+                        <button style="margin-top: 10px;" class="popup-btn">
+                            Camera Details
+                        </button>
+                    </a>
+
+                </div>
+
+                <!-- <div class="popup-overlay">
+                    <div class="popup">
+                      <h2>Popup Content</h2>
+                      <p>This is the content of the popup.</p>
+                      <button class="close-btn">Close</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="first-data data-card">
+
+            <div class="camera-section">
+                <div class="camera-details">
+                    <i class="fa-solid fa-video fa-2xl"></i>
+                    <p>#2</p>
+                    <p>Home</p>
+                </div>
+                <div class="ip-address">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    <p>123.4534.342.323.32</p>
+                </div>
+                <div class="geo-tag">
+                    <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+                    <a href="#">Go to Geo-Location</a>
+                </div>
+                <div class="activities">
+                    <a href="#">
+                        <button>
+                            Live Recording
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button>
+                            Section Viewer
+                        </button>
+                    </a>
+
+                    <a href="#" id="">
+                        <button style="margin-top: 10px;" class="popup-btn">
+                            Camera Details
+                        </button>
+                    </a>
+
+                </div>
+
+                <!-- <div class="popup-overlay">
+                    <div class="popup">
+                      <h2>Popup Content</h2>
+                      <p>This is the content of the popup.</p>
+                      <button class="close-btn">Close</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="first-data data-card">
+
+            <div class="camera-section">
+                <div class="camera-details two-three">
+                    <i class="fa-solid fa-video fa-2xl"></i>
+                    <p>#3</p>
+                    <p>Home</p>
+                </div>
+                <div class="ip-address">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    <p>123.4534.342.323.32</p>
+                </div>
+                <div class="geo-tag">
+                    <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+                    <a href="#">Go to Geo-Location</a>
+                </div>
+                <div class="activities">
+                    <a href="#">
+                        <button>
+                            Live Recording
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button>
+                            Section Viewer
+                        </button>
+                    </a>
+
+                    <a href="#" id="">
+                        <button style="margin-top: 10px;" class="popup-btn">
+                            Camera Details
+                        </button>
+                    </a>
+
+                </div>
+
+                <!-- <div class="popup-overlay">
+                    <div class="popup">
+                      <h2>Popup Content</h2>
+                      <p>This is the content of the popup.</p>
+                      <button class="close-btn">Close</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="first-data data-card">
+
+            <div class="camera-section">
+                <div class="camera-details">
+                    <i class="fa-solid fa-video fa-2xl"></i>
+                    <p>#4</p>
+                    <p>Home
+                    </p>
+                </div>
+                <div class="ip-address">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    <p>123.4534.342.323.32</p>
+                </div>
+                <div class="geo-tag">
+                    <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+                    <a href="#">Go to Geo-Location</a>
+                </div>
+                <div class="activities">
+                    <a href="#">
+                        <button>
+                            Live Recording
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button>
+                            Section Viewer
+                        </button>
+                    </a>
+
+                    <a href="#" id="">
+                        <button style="margin-top: 10px;" class="popup-btn">
+                            Camera Details
+                        </button>
+                    </a>
+
+                </div>
+
+                <!-- <div class="popup-overlay">
+                    <div class="popup">
+                      <h2>Popup Content</h2>
+                      <p>This is the content of the popup.</p>
+                      <button class="close-btn">Close</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+    </section>
+
+    <a href="#top">
+        <h4>jump to top</h4>
+    </a>
+
+    <div class="locality" id="Delhi">
+        <h3>
+            Bikaner
+        </h3>
+    </div>
+
+    <section>
+        <div class="first-data data-card">
+
+            <div class="camera-section">
+                <div class="camera-details">
+                    <i class="fa-solid fa-video fa-2xl"></i>
+                    <p>#1</p>
+                    <p>Home</p>
+                </div>
+                <div class="ip-address">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    <p>123.4534.342.323.32</p>
+                </div>
+                <div class="geo-tag">
+                    <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+                    <a href="#">Go to Geo-Location</a>
+                </div>
+                <div class="activities">
+                    <a href="#">
+                        <button>
+                            Live Recording
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button>
+                            Section Viewer
+                        </button>
+                    </a>
+
+                    <a href="#" id="">
+                        <button style="margin-top: 10px;" class="popup-btn">
+                            Camera Details
+                        </button>
+                    </a>
+
+                </div>
+
+                <!-- <div class="popup-overlay">
+                    <div class="popup">
+                      <h2>Popup Content</h2>
+                      <p>This is the content of the popup.</p>
+                      <button class="close-btn">Close</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="first-data data-card">
+
+            <div class="camera-section">
+                <div class="camera-details">
+                    <i class="fa-solid fa-video fa-2xl"></i>
+                    <p>#2</p>
+                    <p>Home</p>
+                </div>
+                <div class="ip-address">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    <p>123.4534.342.323.32</p>
+                </div>
+                <div class="geo-tag">
+                    <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+                    <a href="#">Go to Geo-Location</a>
+                </div>
+                <div class="activities">
+                    <a href="#">
+                        <button>
+                            Live Recording
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button>
+                            Section Viewer
+                        </button>
+                    </a>
+
+                    <a href="#" id="">
+                        <button style="margin-top: 10px;" class="popup-btn">
+                            Camera Details
+                        </button>
+                    </a>
+
+                </div>
+
+                <!-- <div class="popup-overlay">
+                    <div class="popup">
+                      <h2>Popup Content</h2>
+                      <p>This is the content of the popup.</p>
+                      <button class="close-btn">Close</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="first-data data-card">
+
+            <div class="camera-section">
+                <div class="camera-details two-three">
+                    <i class="fa-solid fa-video fa-2xl"></i>
+                    <p>#3</p>
+                    <p>Home</p>
+                </div>
+                <div class="ip-address">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    <p>123.4534.342.323.32</p>
+                </div>
+                <div class="geo-tag">
+                    <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+                    <a href="#">Go to Geo-Location</a>
+                </div>
+                <div class="activities">
+                    <a href="#">
+                        <button>
+                            Live Recording
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button>
+                            Section Viewer
+                        </button>
+                    </a>
+
+                    <a href="#" id="">
+                        <button style="margin-top: 10px;" class="popup-btn">
+                            Camera Details
+                        </button>
+                    </a>
+
+                </div>
+
+                <!-- <div class="popup-overlay">
+                    <div class="popup">
+                      <h2>Popup Content</h2>
+                      <p>This is the content of the popup.</p>
+                      <button class="close-btn">Close</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="first-data data-card">
+
+            <div class="camera-section">
+                <div class="camera-details">
+                    <i class="fa-solid fa-video fa-2xl"></i>
+                    <p>#4</p>
+                    <p>Home
+                    </p>
+                </div>
+                <div class="ip-address">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    <p>123.4534.342.323.32</p>
+                </div>
+                <div class="geo-tag">
+                    <i class="fa-solid fa-map-location-dot fa-2xl"></i>
+                    <a href="#">Go to Geo-Location</a>
+                </div>
+                <div class="activities">
+                    <a href="#">
+                        <button>
+                            Live Recording
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button>
+                            Section Viewer
+                        </button>
+                    </a>
+                    <!-- <a href="#" id=""> -->
+                    <button style="margin-top: 10px;" id="popupButton">
+                        Camera Details
+                    </button>
+                    <!-- </a> -->
+
+                </div>
+
+                <!-- <div class="popup-overlay">
+                    <div class="popup">
+                      <h2>Popup Content</h2>
+                      <p>This is the content of the popup.</p>
+                      <button class="close-btn">Close</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+    </section>
+
+    <a href="#top">
+        <h4>jump to top</h4>
+    </a>
+
+    <h2 style="text-align: center; color: #ffffff; margin: 30px 0; letter-spacing: 5px;">
+        @Copyright Cyber Vision 2k23
+    </h2>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#dropdown').change(function () {
+                var selectedSection = $(this).val();
+                $('html, body').animate({
+                    scrollTop: $('#' + selectedSection).offset().top
+                }, 1000);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const popupBtns = document.querySelectorAll('.popup-btn');
+            const closeBtns = document.querySelectorAll('.close-btn');
+            const overlay = document.querySelector('.popup-overlay');
+
+            popupBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    overlay.style.display = 'block';
+                });
+            });
+
+            closeBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    overlay.style.display = 'none';
+                });
+            });
+
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay) {
+                    overlay.style.display = 'none';
+                }
+            });
+        });
+
+
+    </script>
+    <!-- 
+    <script src="">
+       
+    </script> -->
+</body>
+
+</html>

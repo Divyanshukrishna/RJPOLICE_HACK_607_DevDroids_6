@@ -50,7 +50,8 @@ h4 {
     scroll-behavior: smooth;
 }
 
-.locality h3 {
+.locality h3,
+h5 {
     color: #fff;
     margin: 60px 0 0px 30px;
     font-size: 35px;
@@ -66,16 +67,13 @@ section {
 .data-card {
     position: relative;
     margin: 10px 20px 20px 40px;
-    /* max-width: 900px; */
     width: 900px;
-    /* background-color: #fff; */
     border-left: 5px solid rgb(237, 65, 65);
     border-bottom: 4px solid rgb(237, 65, 65);
     border-radius: 10px;
-    height: 350px;
+    height: 390px;
     text-align: center;
     backdrop-filter: blur(10px);
-    /* z-index: -100; */
 }
 
 .camera-section {
@@ -133,7 +131,6 @@ section {
     text-align: center;
     width: 250px;
     height: 30px;
-    /* border: none; */
     background-color: #fff;
     border: 1px solid black;
     font-size: 18px;
@@ -142,13 +139,22 @@ section {
     color: tomato;
     cursor: pointer;
 }
-  
+
+.geo-tag {
+    margin: 20px 0 0 0;
+    cursor: pointer;
+}
+
+.geo-tag a {
+    text-decoration: none;
+    color: #fff;
+}
+
 
 @media (min-width: 769px) and (max-width: 1028px) {}
 
 @media (max-width: 1028px) {
     section {
-        /* display: block; */
         flex-direction: column;
     }
 
