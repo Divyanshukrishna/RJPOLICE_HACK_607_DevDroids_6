@@ -24,5 +24,10 @@ class UserDataCompany(models.Model):
     def __str__(self):
         return self.text
     
+    
+    
+class UploadedImage(models.Model):
+    image=models.ImageField(upload_to="image/")
+    uploaded_at = models.DateTimeField(auto_now_add=True)
 
     

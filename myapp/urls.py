@@ -24,7 +24,7 @@ urlpatterns = [
     path('cameraprivate3/',views.cameraprivate3, name="cameraprivate3"),
     path('cameraprivate4/',views.cameraprivate4, name="cameraprivate4"),
 
-    path('geotrack/',views.geotrack, name="geotrack")
+    path('geotrack/',views.geotrack, name="geotrack"),
 
 ]
 

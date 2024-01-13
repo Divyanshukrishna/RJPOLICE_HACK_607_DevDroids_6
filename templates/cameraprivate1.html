@@ -55,7 +55,8 @@
             <section>
                 <div class="main-details">
                     <div class="profile">
-                        <img src="{% static 'images/profile-image.webp' %}" alt="Image of the camera owner">
+                        {% comment %} <img src="{% static 'images/profile-image.webp' %}" alt="Image of the camera owner"> {% endcomment %}
+                        <img src="{{ image.image.url }}" alt="Uploaded Image">
                         <a href="#" id="popupLink"><i class="fa-solid fa-pen-to-square fa-2xs"></i></a>
                     </div>
                     <div class="name">
@@ -99,11 +100,18 @@
         <div class="overlay" id="overlay"></div>
         <div class="popup-container" id="popupContainer">
             <p>Upload the Image :-</p>
-            <input type="file" name="" id="">
-            <a href="/form/form.html">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+            <button type="submit">Upload</button>
+            </form>
+            {% comment %} {% if image %}
+                <img src="{{ image.image.url }}" alt="Uploaded Image">
+            {% endif %} {% endcomment %}
+            <a href="{% url "cameraperson" %}">
                 <h6>Manual edit -></h6>
             </a>
-            <button type="submit"></button>
+            {% comment %} <button type="submit">Submit</button> {% endcomment %}
             <button onclick="closePopup()">Close</button>
         </div>
     </div>

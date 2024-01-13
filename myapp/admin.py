@@ -5,3 +5,5 @@ from .models import *
 admin.site.register(Word)
 
 admin.site.register(UserDataCompany)
+
+admin.site.register(UploadedImage)

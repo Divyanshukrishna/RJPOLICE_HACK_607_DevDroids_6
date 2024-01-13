@@ -1,8 +1,10 @@
-from django.shortcuts import render,HttpResponse,redirect
+from django.shortcuts import render,HttpResponse,redirect,get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login
 from django.contrib import messages
 from .models import *
+from .models import UploadedImage
+from .forms import UploadImageForm
 
 
 # Create your views here.
@@ -24,57 +26,89 @@ def datasetpublic(request):
 
 
 def camerapublic1(request):
-    aiml=UserDataCompany.objects.last()
+    aiml=UserDataCompany.objects.first()
     return render(request,"camerapublic1.html",{'aiml':aiml})
 
 
 def camerapublic2(request):
-    aiml=UserDataCompany.objects.last()
+    aiml=UserDataCompany.objects.all()[1]
     return render(request,"camerapublic2.html",{'aiml':aiml})
 
 
 def camerapublic3(request):
-    aiml=UserDataCompany.objects.last()
+    aiml=UserDataCompany.objects.all()[2]
     return render(request,"camerapublic3.html",{'aiml':aiml})
 
 
 def camerapublic4(request):
-    aiml=UserDataCompany.objects.last()
+    aiml=UserDataCompany.objects.all()[3]
     return render(request,"camerapublic4.html",{'aiml':aiml})
 
 
 
 
 def cameraprivate1(request):
-    aiml=UserDataCompany.objects.last()
-    return render(request,"cameraprivate1.html",{'aiml':aiml})
+    aiml=UserDataCompany.objects.first()
+    if request.method == 'POST':
+        form = UploadImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            latest_image = UploadedImage.objects.latest('uploaded_at')
+            return render(request, 'cameraprivate1.html', {'form': form, 'image': latest_image, 'aiml':aiml})
+    else:
+        form = UploadImageForm()
+        
+    return render(request,"cameraprivate1.html",{'aiml':aiml,'form': form})
 
 
 def cameraprivate2(request):
-    aiml=UserDataCompany.objects.last()
-    return render(request,"cameraprivate2.html",{'aiml':aiml})
-
+    aiml=UserDataCompany.objects.all()[1]
+    if request.method == 'POST':
+        form = UploadImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            latest_image = UploadedImage.objects.latest('uploaded_at')
+            return render(request, 'cameraprivate2.html', {'form': form, 'image': latest_image, 'aiml':aiml})
+    else:
+        form = UploadImageForm()
+        
+    return render(request,"cameraprivate2.html",{'aiml':aiml,'form': form})
+    
+    
 
 def cameraprivate3(request):
-    aiml=UserDataCompany.objects.last()
-    return render(request,"cameraprivate3.html",{'aiml':aiml})
+    aiml=UserDataCompany.objects.all()[2]
+    if request.method == 'POST':
+        form = UploadImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            latest_image = UploadedImage.objects.latest('uploaded_at')
+            return render(request, 'cameraprivate3.html', {'form': form, 'image': latest_image, 'aiml':aiml})
+    else:
+        form = UploadImageForm()
+        
+    return render(request,"cameraprivate3.html",{'aiml':aiml,'form': form})
 
 
 def cameraprivate4(request):
-    aiml=UserDataCompany.objects.last()
-    return render(request,"cameraprivate4.html",{'aiml':aiml})
+    aiml=UserDataCompany.objects.all()[3]
+    if request.method == 'POST':
+        form = UploadImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            latest_image = UploadedImage.objects.latest('uploaded_at')
+            return render(request, 'cameraprivate4.html', {'form': form, 'image': latest_image, 'aiml':aiml})
+    else:
+        form = UploadImageForm()
+        
+    return render(request,"cameraprivate1.html",{'aiml':aiml,'form': form})
 
 
 
 def geotrack(request):
-    cs=UserDataCompany.objects.last()
+    cs=UserDataCompany.objects.all()
     return render(request,"geotrack.html",{'cs':cs})
 
-
-
-
-# def dataset(request):
-#     return render(request,"dataset.html")
 
 def signup(request):
     if request.method == 'POST':
