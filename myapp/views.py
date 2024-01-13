@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login
 from django.contrib import messages
 from .models import *
-from .models import UploadedImage
+
 from .forms import UploadImageForm
 
 
