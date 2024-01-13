@@ -143,8 +143,8 @@ def signin(request):
 
     return render(request,"signin.html")
 
-def error_404(request,exception):
-    return render(request,"404.html")
+# def error_404(request,exception):
+#     return render(request,"404.html")
 
 def afterlogin(request):
     us=Word.objects.last()
