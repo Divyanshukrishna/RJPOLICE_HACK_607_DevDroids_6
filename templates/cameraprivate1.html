@@ -56,7 +56,10 @@
                 <div class="main-details">
                     <div class="profile">
                         {% comment %} <img src="{% static 'images/profile-image.webp' %}" alt="Image of the camera owner"> {% endcomment %}
-                        <img src="{{ image.image.url }}" alt="Uploaded Image">
+                        {% comment %} <img src="{{ image.image.url }}" alt="Uploaded Image"> {% endcomment %}
+                        {% if image %}
+                            <img src="{{ image.image.url }}" alt="Uploaded Image">
+                        {% endif %}
                         <a href="#" id="popupLink"><i class="fa-solid fa-pen-to-square fa-2xs"></i></a>
                     </div>
                     <div class="name">

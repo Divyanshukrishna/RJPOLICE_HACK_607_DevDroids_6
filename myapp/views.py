@@ -62,7 +62,7 @@ def cameraprivate1(request):
 
 
 def cameraprivate2(request):
-    aiml=UserDataCompany.objects.all()[1]
+    aiml=UserDataCompany.objects.all()
     if request.method == 'POST':
         form = UploadImageForm(request.POST, request.FILES)
         if form.is_valid():
@@ -77,7 +77,7 @@ def cameraprivate2(request):
     
 
 def cameraprivate3(request):
-    aiml=UserDataCompany.objects.all()[2]
+    aiml=UserDataCompany.objects.all()
     if request.method == 'POST':
         form = UploadImageForm(request.POST, request.FILES)
         if form.is_valid():
@@ -91,7 +91,7 @@ def cameraprivate3(request):
 
 
 def cameraprivate4(request):
-    aiml=UserDataCompany.objects.all()[3]
+    aiml=UserDataCompany.objects.all()
     if request.method == 'POST':
         form = UploadImageForm(request.POST, request.FILES)
         if form.is_valid():
