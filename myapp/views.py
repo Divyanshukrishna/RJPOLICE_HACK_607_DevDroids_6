@@ -62,7 +62,7 @@ def cameraprivate1(request):
 
 
 def cameraprivate2(request):
-    aiml=UserDataCompany.objects.all()
+    aiml=UserDataCompany.objects.all()[1]
     if request.method == 'POST':
         form = UploadImageForm(request.POST, request.FILES)
         if form.is_valid():
@@ -77,7 +77,7 @@ def cameraprivate2(request):
     
 
 def cameraprivate3(request):
-    aiml=UserDataCompany.objects.all()
+    aiml=UserDataCompany.objects.all()[2]
     if request.method == 'POST':
         form = UploadImageForm(request.POST, request.FILES)
         if form.is_valid():
@@ -91,7 +91,7 @@ def cameraprivate3(request):
 
 
 def cameraprivate4(request):
-    aiml=UserDataCompany.objects.all()
+    aiml=UserDataCompany.objects.all()[3]
     if request.method == 'POST':
         form = UploadImageForm(request.POST, request.FILES)
         if form.is_valid():
@@ -106,7 +106,7 @@ def cameraprivate4(request):
 
 
 def geotrack(request):
-    cs=UserDataCompany.objects.all()
+    cs=UserDataCompany.objects.first()
     return render(request,"geotrack.html",{'cs':cs})
 
 
