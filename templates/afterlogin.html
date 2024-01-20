@@ -51,7 +51,13 @@
 
     <section class="home" id="home">
         <div class="content">
+            
+            {% if us.text %}
             <h2>Welcome {{us.text}} in</h2>
+            {% else %}
+            <h2>Welcome Everyone in</h2>
+            {% endif %}
+
             <h1>Geo-Tagging System Software</h1>
             <p>Get in touch with us today to learn more about how geo-tagging can revolutionize your private camera
                 surveillance!</p>
