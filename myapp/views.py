@@ -48,7 +48,7 @@ def camerapublic4(request):
 
 
 def cameraprivate1(request):
-    aiml=UserDataCompany.objects.last()
+    aiml=UserDataCompany.objects.first()
     if request.method == 'POST':
         form = UploadImageForm(request.POST, request.FILES)
         if form.is_valid():
