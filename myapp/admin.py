@@ -4,6 +4,8 @@ from .models import *
 
 admin.site.register(Word)
 
-admin.site.register(UserDataCompany)
+@admin.register(UserDataCompany)
+class UserDataCompanyAdmin(admin.ModelAdmin):
+    list_display=['text' , 'cameracompany', 'email', 'range', 'pincode']
 
 admin.site.register(UploadedImage)
